@@ -1,0 +1,32 @@
+        /* 탭 스타일 */
+        .tab-container {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .tab {
+            flex: 1;
+            padding: 10px;
+            text-align: center;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-bottom: none;
+        }
+        .tab.active {
+            background: #ffffff;
+            border-bottom: 1px solid #ffffff;
+            font-weight: bold;
+        }
+
+        /* 콘텐츠 스타일 */
+        .tab-content {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background: #ffffff;
+        }
+        .content {
+            display: none;
+        }
+        .content.active {
+            display: block;
+        }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+        <h1>My Portfolio</h1>
+    </header>
+    
+    <main>
+         <section class="gallery">
+            <div class="gallery-item">
+                <a href="http://127.0.0.1:5500/1.bulb/bulb.html"  target="_blank">
+                    <img src="https://via.placeholder.com/300" alt="Image 1">
+                </a>
+                <p>전구 on-off</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300" alt="Image 2">
+                <p>Description for Image 2</p>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/300" alt="Image 3">
+                <p>Description for Image 3</p>
+            </div>
+            <!-- Add more gallery items as needed -->
+        </section>
+    </main>
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-image">
+        <div id="caption"></div>
+    </div>
+
+    
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전구</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+     }
+    #bulb {
+        width: 300px; /* 이미지의 크기를 조정 */
+        transition: transform 0.3s ease; /* 부드러운 전환 효과 */
+    }
+    input[type="button"]{
+        padding: 10px 20px;
+        font-size: 25px;
+        margin: 5px;
+        border: 2px solid black;
+        border-radius: 10px;
+        background-color: rgb(0, 255, 0);
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    #off{
+        background-color: red;
+    }
+    #repeat{
+        background-color: rgb(188, 81, 230);
+    }
+    input[type="input"]{
+        transform: scale(0.9);
+    }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <img id="bulb" src="../0.img/light-off-bulb.png" alt=""><br><br>
+        <input type="button" onclick="myfunon()" id="on" value="on">
+        <input type="button" onclick="myfunoff()" id="off" value="off">
+        <input type="button" onclick="repeat()" id="repeat" value="repeat">
+        <input type="button" value="back">
+    </div>
+
+    <script>
+       
+
+        function myfunon(){
+        document.getElementById("bulb").src='../0.img/light-on-bulb.png';
+        }
+        function myfunoff(){
+        document.getElementById("bulb").src='../0.img/light-off-bulb.png';
+        }
+        let imageState = false; // 이미지 상태를 추적하는 변수
+        function repeat(){
+            const bulb = document.getElementById("bulb");
+            // 현재 상태에 따라 이미지를 변경합니다.
+            if (imageState) {
+                bulb.src = '../0.img/light-off-bulb.png'; // 꺼진 전구 이미지
+            } else {
+                bulb.src = '../0.img/light-on-bulb.png'; // 켜진 전구 이미지
+            }
+            imageState = !imageState; // 상태를 반전시킵니다.
+        }
+    </script>
+
+</body>
+
+</html>
